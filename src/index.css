@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* ---------- GLOBAL SMOOTH SCROLL ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- COMMON PAGE LAYOUT ---------- */
+
+.page-container {
+  @apply px-5 py-20 max-w-250 mx-auto;
+}
+
+.page-container-wide {
+  @apply px-5 py-20 max-w-275 mx-auto;
+}
+
+.heading-primary {
+  @apply text-[#1e3a2f] mb-8;
+}
+
+.heading-secondary {
+  @apply text-[#1e3a2f] mt-12;
+}
+
+.paragraph {
+  @apply leading-8 mb-5;
+}
+
+/* ---------- PRODUCT ---------- */
+
+.product-box {
+  @apply mt-12 p-10 bg-gray-100 rounded-lg;
+}
+
+.order-button {
+  @apply px-8 py-4 bg-[#1e3a2f] text-white cursor-pointer hover:bg-[#163126] transition;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+  @apply flex justify-between p-5 bg-[#1e3a2f] text-white;
+}
+
+.nav-link {
+  @apply mr-5 text-white no-underline hover:opacity-80;
+}
+
+/* ---------- BUTTON GLOW EFFECT ---------- */
+
+.btn-glow {
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(34,197,94,0.35);
+}
+
+/* ---------- FADE ANIMATION ---------- */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
