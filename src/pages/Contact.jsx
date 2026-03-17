@@ -88,7 +88,7 @@ const Contact = () => {
                   href="tel:+919999999999"
                   className="text-green-700 block"
                 >
-                  +91 99999 99999
+                  +91 6354019144
                 </a>
               )}
 
@@ -104,7 +104,7 @@ const Contact = () => {
                   href="tel:+918888888888"
                   className="text-green-700 block"
                 >
-                  +91 88888 88888
+                  +91 6353559096
                 </a>
               )}
 

@@ -14,10 +14,25 @@ function Home() {
     <>
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative min-h-screen flex items-center bg-[#f6faf8] overflow-hidden fade-up">
+      <section className="relative min-h-screen flex items-center bg-[#f6faf8] overflow-hidden fade-up md:pt-0 -mt-1">
 
         {/* LEFT CONTENT */}
-        <div className="w-full md:w-1/2 px-8 md:px-20 py-20 z-10">
+        <div className="w-full md:w-1/2 px-8 md:px-20 pt-0 pb-20 md:py-20 z-10">
+
+          {/* MOBILE ONLY IMAGE - at top before heading */}
+          <div className="block md:hidden mb-8 -mx-8 -mt-1">
+            <div className="relative w-screen">
+              <img
+                src="/images/pellets%201.png"
+                alt="Pine Wood Pellets"
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-black/40 text-white text-center py-2 text-sm font-medium">
+                Pure Pine Wood Pellets
+              </div>
+            </div>
+          </div>
+
           <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
             Premium Pure Pine Wood Pellets for Sustainable Energy
           </h1>
@@ -35,13 +50,12 @@ function Home() {
           </Link>
         </div>
 
-        {/* RIGHT CURVED IMAGE */}
+        {/* RIGHT CURVED IMAGE - DESKTOP ONLY */}
         <div className="hidden md:block absolute right-0 top-0 h-full w-1/2">
           <div className="absolute inset-0 bg-white rounded-l-[350px] shadow-2xl"></div>
-
           <div className="relative h-full flex items-center justify-center p-12">
             <img
-              src="/images/pellets 1.png"
+              src="/images/pellets%201.png"
               alt="Pine Wood Pellets"
               className="max-h-[80%] object-contain"
             />
@@ -88,7 +102,7 @@ function Home() {
 
           {/* LOCATION */}
           <a
-            href="https://www.google.com/maps?q=Survey+No.+3,+Village+Ambavpura,+Chhatral+-+Pansar+Rd,+Pansar,+Kadi,+Gujarat+382729"
+            href="https://maps.app.goo.gl/JnBDbkL9v74WW2pV7"
             target="_blank"
             rel="noreferrer"
             className="group"
@@ -98,11 +112,11 @@ function Home() {
                 <FaMapMarkerAlt size={20} />
               </div>
               <h3 className="font-semibold group-hover:text-green-500">Location</h3>
-              <p className="text-sm">Kadi, Gujarat</p>
+              <p className="text-sm">Chhatral-GIDC, Gujarat</p>
             </div>
           </a>
 
-          {/* MOBILE */}
+          {/* MOBILE NUMBER */}
           <div className="cursor-pointer">
             <div
               onClick={() => setShowNumbers(!showNumbers)}
@@ -111,22 +125,18 @@ function Home() {
               <div className="bg-white text-black rounded-full p-4 mb-4 group-hover:text-green-600 transition">
                 <FaPhoneAlt size={20} />
               </div>
-
               <h3 className="font-semibold group-hover:text-green-500">
                 Mobile
               </h3>
-
               <p className="text-sm underline">
                 View Mobile Number
               </p>
             </div>
-
             {showNumbers && (
               <div className="mt-3 space-y-1 text-sm">
                 <a href="tel:+916354019144" className="block hover:text-green-500">
                   Nimesh Patel: +91 6354 019 144
                 </a>
-
                 <a href="tel:+916353559096" className="block hover:text-green-500">
                   Dip Patel: +91 6353 559 096
                 </a>
@@ -147,7 +157,7 @@ function Home() {
 
           {/* WEB */}
           <a
-            href="https://example.com"
+            href="https://universalbiomasspellets.com"
             target="_blank"
             rel="noreferrer"
             className="group"
@@ -157,7 +167,7 @@ function Home() {
                 <FaGlobe size={20} />
               </div>
               <h3 className="font-semibold group-hover:text-green-500">Web</h3>
-              <p className="text-sm">www.example.com</p>
+              <p className="text-sm">www.universalbiomasspellets.com</p>
             </div>
           </a>
 
@@ -184,14 +194,6 @@ function Home() {
         </Link>
 
       </section>
-
-      {/* ================= MOBILE AUTO CALL BUTTON ================= */}
-      <a
-        href="tel:+916354019144"
-        className="fixed bottom-6 right-6 md:hidden bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-xl transition duration-300 z-50"
-      >
-        <FaPhoneAlt size={22} />
-      </a>
 
     </>
   )

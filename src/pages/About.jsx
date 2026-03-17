@@ -15,10 +15,23 @@ const About = () => {
   return (
     <div className="max-w-7xl mx-auto px-6 py-10">
 
+      {/* PAGE TITLE - MOBILE ONLY AT TOP */}
+      <div className="block md:hidden mb-6">
+        <h1 className="text-3xl font-bold text-green-700">
+          About Us
+        </h1>
+        <div className="mt-3 bg-gray-100 px-4 py-2 rounded text-sm text-gray-600">
+          <Link to="/" className="hover:text-green-700">
+            Home
+          </Link>{" "}
+          / About Us
+        </div>
+      </div>
+
       <div className="grid md:grid-cols-4 gap-10">
 
         {/* LEFT SIDEBAR */}
-        <div className="md:col-span-1 space-y-8">
+        <div className="md:col-span-1 space-y-8 order-2 md:order-1">
 
           {/* COMPANY HIGHLIGHTS */}
           <div className="border border-gray-200 rounded-md overflow-hidden bg-white shadow-sm">
@@ -93,21 +106,18 @@ const About = () => {
 
               {showNumbers && (
                 <div className="space-y-2">
-
                   <a
                     href="tel:+916354019144"
                     className="block text-green-700 hover:underline"
                   >
                     Nimesh Patel - +91 6354019144
                   </a>
-
                   <a
                     href="tel:+916353559096"
                     className="block text-green-700 hover:underline"
                   >
                     Dip Patel - +91 6353559096
                   </a>
-
                 </div>
               )}
 
@@ -116,27 +126,21 @@ const About = () => {
 
         </div>
 
-
         {/* RIGHT CONTENT */}
-        <div className="md:col-span-3 space-y-10">
+        <div className="md:col-span-3 space-y-10 order-1 md:order-2">
 
-          {/* PAGE TITLE */}
-          <div>
-
+          {/* PAGE TITLE - DESKTOP ONLY */}
+          <div className="hidden md:block">
             <h1 className="text-3xl font-bold text-green-700">
               About Us
             </h1>
-
-            {/* Highlight Strip */}
             <div className="mt-3 bg-gray-100 px-4 py-2 rounded text-sm text-gray-600">
               <Link to="/" className="hover:text-green-700">
                 Home
               </Link>{" "}
               / About Us
             </div>
-
           </div>
-
 
           {/* ABOUT */}
           <div className="bg-white p-6 rounded shadow-sm">
@@ -162,7 +166,6 @@ const About = () => {
 
           </div>
 
-
           {/* MISSION & VISION */}
           <div className="grid md:grid-cols-2 gap-6">
 
@@ -170,7 +173,6 @@ const About = () => {
               <h3 className="text-lg font-semibold text-green-700 mb-3">
                 Our Mission
               </h3>
-
               <p className="text-gray-700">
                 Our mission is to provide industries with reliable biomass fuel
                 solutions by delivering premium quality pellets and promoting
@@ -182,7 +184,6 @@ const About = () => {
               <h3 className="text-lg font-semibold text-green-700 mb-3">
                 Our Vision
               </h3>
-
               <p className="text-gray-700">
                 To become one of the leading biomass pellet manufacturers in
                 India by delivering sustainable energy solutions and maintaining
@@ -192,7 +193,6 @@ const About = () => {
 
           </div>
 
-
           {/* WHY CHOOSE US */}
           <div className="bg-white p-6 rounded shadow-sm">
 
@@ -201,17 +201,14 @@ const About = () => {
             </h2>
 
             <div className="grid md:grid-cols-2 gap-3 text-gray-700">
-
               <p>• Premium Quality Pine Wood Pellets</p>
               <p>• Timely Bulk Supply</p>
               <p>• Trusted by Industrial Clients</p>
               <p>• Guaranteed Product Purity</p>
               <p>• High Combustion Performance</p>
-
             </div>
 
           </div>
-
 
           {/* FACTORY */}
           <div>
@@ -220,8 +217,7 @@ const About = () => {
               Our Factory
             </h2>
 
-            <div className="grid md:grid-cols-4 gap-4">
-
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {images.map((img, index) => (
                 <img
                   key={index}
@@ -231,7 +227,6 @@ const About = () => {
                   className="cursor-pointer rounded shadow hover:scale-105 transition"
                 />
               ))}
-
             </div>
 
           </div>
@@ -239,7 +234,6 @@ const About = () => {
         </div>
 
       </div>
-
 
       {/* IMAGE POPUP */}
       {selectedImage && (

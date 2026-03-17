@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ModalImage from "react-modal-image"; // <- import lightbox component
+import ModalImage from "react-modal-image";
 
 function Products() {
   return (
@@ -8,28 +8,26 @@ function Products() {
 
       {/* PAGE TITLE */}
       <div className="mb-8">
-
         <h1 className="text-3xl font-bold text-green-700">
           Products
         </h1>
-
         <div className="mt-3 bg-gray-100 px-4 py-2 rounded text-sm text-gray-600">
           <Link to="/" className="hover:text-green-700">
             Home
           </Link>{" "}
           / Products
         </div>
-
       </div>
 
       {/* PRODUCT IMAGE WITH LIGHTBOX */}
       <div className="flex justify-center mb-6">
-        <ModalImage
-          small="/images/pellets.jpeg"   // thumbnail
-          large="/images/pellets.jpeg"   // full image
-          alt="Pure Pine Wood Pellets"
-          className="w-80 h-auto rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300"
-        />
+        <div className="w-80 h-auto rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+          <ModalImage
+            small="/images/pellets.jpeg"
+            large="/images/pellets.jpeg"
+            alt="Pure Pine Wood Pellets"
+          />
+        </div>
       </div>
 
       {/* PRODUCT TITLE */}
@@ -64,11 +62,11 @@ function Products() {
         </h2>
 
         <div className="mt-8">
-          <a href="/contact">
+          <Link to="/contact">
             <button className="order-button">
               Order Now / Contact for Bulk Pricing
             </button>
-          </a>
+          </Link>
         </div>
 
       </div>
